@@ -6,7 +6,8 @@ This repo is for fun only. Untested, work in progress.
 
 ## Setup
 
-Install [Bun](https://bun.sh)
+1. Install [Bun](https://bun.sh)
+2. `./install.sh`
 
 ## Development
 
