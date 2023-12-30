@@ -20,32 +20,38 @@ function App() {
 
   return (
     <>
-      <img src={viteLogo} className="logo" alt="Vite logo" />
-      <img src={reactLogo} className="logo react" alt="React logo" />
-      <h1 className="text-3xl font-bold underline">
-        <a href="https://neutralino.js.org">
-          Neutralino
-        </a> + <a href="https://vitejs.dev">
-          Vite
-        </a> + <a href="https://react.dev">
-          React
-        </a> + <a href="https://tailwindcss.com">
-          Tailwind
-        </a>
-      </h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+      <main className="container mx-auto p-4">
+        <div className="flex space-x-2">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </div>
+        <h1 className="text-3xl font-bold my-8">
+          <a href="https://neutralino.js.org">
+            Neutralino
+          </a> + <a href="https://vitejs.dev">
+            Vite
+          </a> + <a href="https://react.dev">
+            React
+          </a> + <a href="https://tailwindcss.com">
+            Tailwind
+          </a>
+        </h1>
+        <button className="rounded bg-black text-white py-3 w-48" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
+        <p className="text-sm my-4">
           Edit <code>app/src/App.tsx</code> and save to test HMR
         </p>
-        <pre>
-          <code>
-            {JSON.stringify(dir, null, 2)}
-          </code>
-        </pre>
-      </div>
+
+        <details>
+          <summary className="text-xs">Current directory data from Neutralino</summary>
+          <pre className="text-xs opacity-50">
+            <code>
+              {JSON.stringify(dir, null, 2)}
+            </code>
+          </pre>
+        </details>
+      </main>
     </>
   )
 }
